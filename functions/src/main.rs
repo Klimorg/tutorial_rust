@@ -40,7 +40,10 @@ fn index_selection(name: String) {
 
         match index.cmp(&len_a) {
             Ordering::Less => println!("Here's your number {}", a[index]),
-            Ordering::Equal => println!("Here's your number {}", a[index]),
+            Ordering::Equal => {
+                println!("Too big !");
+                break;
+            },
             Ordering::Greater => {
                 println!("Too big !");
                 break;
